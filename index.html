@@ -1,0 +1,312 @@
+    <!doctype html>
+    <html lang="es">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BIOSIMILARES</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+ 
+
+
+    </head>
+    <body>
+    <header class="card">
+        <div class="container top">
+        <div class="logo">
+            <img src="bio.png" alt="Logo Farmacia">
+            
+  <nav class="menu">
+  <button id="btnCategorias">Categorías ⮟</button>
+  <a href="#ofertas">Ofertas</a>
+  <a href="#farmacia">Farmacia</a>
+  <a href="#mama">Mamá y Bebés</a>
+  <a href="#adulto">Adulto Mayor</a>
+  <a href="#bienestar">Bienestar</a>
+  <a href="#dermo">Dermocosmética</a>
+<a href="#nosotros">Nosotros</a>
+  <div id="barraCategorias" class="oculto">
+    <ul>
+      <li><a href="#productos">Medicinas</a></li>
+      <li>Dispositivos Médicos</li>
+      <li>Vitaminas y Suplementos</li>
+      <li>Cuidado del Adulto</li>
+      <li>Cuidado Infantil</li>
+      <li>Dermocosmética</li>
+      <li>Cuidado Personal</li>
+    </ul>
+  </div>
+</nav>
+<div class="buscador">
+  <input type="text" id="buscar" placeholder="Buscar productos...">
+  <button onclick="buscarProducto()">🔍</button>
+</div>
+
+    </header>
+<!-- === BANNER PRINCIPAL === -->
+<!-- === BANNER PRINCIPAL === -->
+<section class="banner">
+  <div class="slides">
+    <div class="slide active">
+      <a href="https://wa.me/51992647079" target="_blank">
+  <img src="promo1.png" alt="Banner" style="width:100%; border-radius:10px; cursor:pointer;">
+</a>
+  <div class="texto">
+        <h2>Click a la imagen</h2>
+        <p>Y escribe ahora!!!</p>
+      </div>
+    </div>
+    <div class="slide">
+     <a href="https://wa.me/51992647079" target="_blank">
+  <img src="promo2.png" alt="Banner" style="width:100%; border-radius:10px; cursor:pointer;">
+</a>
+ <div class="texto">
+        <h2>Click a la imagen</h2>
+        <p>Y escribe ahora!!!</p>
+      </div>
+    </div>
+    <div class="slide">
+      <a href="https://wa.me/51992647079" target="_blank">
+  <img src="promo3.png" alt="Banner" style="width:100%; border-radius:10px; cursor:pointer;">
+</a>
+ <div class="texto">
+        <h2>Click a la imagen</h2>
+        <p>Y escribe ahora!!!</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Flechas -->
+  <button class="flecha izq">&#10094;</button>
+  <button class="flecha der">&#10095;</button>
+</section>
+
+    <main class="container">
+        <section class="hero">
+        <div class="card">
+            <h1>Medicamentos y bienestar cerca de ti</h1>
+            <p class="lead">Venta de medicamentos, asesoría farmacéutica y servicio de entregas.</p>
+            <a class="cta" href="#contacto">Solicitar entrega</a>
+        </div>
+
+        <aside class="card info">
+            <strong>Horario</strong>
+            <div class="muted">Lun - Dom: 7:00 - 23:00</div>
+            <strong>Teléfono</strong>
+            <div class="muted">+51 9X XXX XXXX</div>
+            <strong>Dirección</strong>
+            <div class="muted">ASOC. PRO. VIV, Ca. 6 LT. 4, Ate 00051</div>
+        <a href="https://www.google.com/maps?q=ASOC.+PRO.+VIV,+Ca.+6+LT.+4,+Ate+00051" target="_blank" class="btn-maps">
+    📍 Ver en Google Maps
+  </a>
+          </aside>
+        </section>
+
+
+    
+
+   
+
+
+       <!-- <section id="servicios">
+        <h2>Servicios</h2>
+        <div class="grid">
+            <div class="card"><strong>Venta de medicamentos</strong><p>Genéricos y de marca.</p></div>
+            <div class="card"><strong>Entrega a domicilio</strong><p>Rápida y segura.</p></div>
+            <div class="card"><strong>Asesoría farmacéutica</strong><p>Consulta con nuestros expertos.</p></div>
+        </div>
+        </section>---->
+
+ <section id="productos">
+  <h2>Productos destacados</h2>
+
+  <div class="grid">
+   <!-- 🟢 Producto Oseolen -->
+<div class="card product"  onclick="location.href='oseolen.html'" target="_blank">
+  <img src="oseolen.jpg" alt="Oseolen">
+  <div class="info">
+    <span class="etiqueta">Caja 1 Vial</span>
+    <h3>Oseolen 5mg/100ml Solución para Perfusión</h3>
+    <div class="marca">BIOSIMILARES</div>
+    <div class="precios">
+      <span class="anterior">S/ 1,200.0</span>
+      <span class="actual">S/ 1,100.0</span>
+    </div>
+    <a href="https://wa.me/51992647079" class="btn" target="_blank">Agregar al carrito</a>
+
+  </div>
+</div>
+
+  
+</a>
+
+
+    <!-- Producto 2 -->
+    <div class="card product">
+      <img src="paracetamol.jpg" alt="Paracetamol">
+      <div class="info">
+        <span class="etiqueta">CAJA x20 UN</span>
+        <h3>Paracetamol 500mg</h3>
+        <span class="marca">Mifarma</span>
+        <div class="precios">
+          <span class="anterior">S/ 12.90</span>
+          <span class="actual">S/ 9.90</span>
+        </div>
+        <button class="btn">Agregar al carrito</button>
+      </div>
+    </div>
+
+    <!-- Producto 3 -->
+    <div class="card product">
+      <img src="ibuprofeno.jpg" alt="Ibuprofeno">
+      <div class="info">
+        <span class="etiqueta">CAJA x24 UN</span>
+        <h3>Ibuprofeno 400mg</h3>
+        <span class="marca">Boticas Perú</span>
+        <div class="precios">
+          <span class="anterior">S/ 14.50</span>
+          <span class="actual">S/ 10.90</span>
+        </div>
+        <button class="btn">Agregar al carrito</button>
+      </div>
+    </div>
+
+    <!-- Producto 4 -->
+    <div class="card product">
+      <img src="vitamina.jpg" alt="Multivitamínico">
+      <div class="info">
+        <span class="etiqueta">FRASCO x60 CAPS</span>
+        <h3>Multivitamínico Plus</h3>
+        <span class="marca">Inkafarma</span>
+        <div class="precios">
+          <span class="anterior">S/ 49.90</span>
+          <span class="actual">S/ 39.90</span>
+        </div>
+        <button class="btn">Agregar al carrito</button>
+      </div>
+    </div>
+
+    <!-- Producto 5 -->
+    <div class="card product">
+      <img src="suero.jpg" alt="Suero Oral">
+      <div class="info">
+        <span class="etiqueta">BOTELLA 500ml</span>
+        <h3>Suero Oral Hidratante</h3>
+        <span class="marca">Mifarma</span>
+        <div class="precios">
+          <span class="anterior">S/ 8.90</span>
+          <span class="actual">S/ 6.50</span>
+        </div>
+        <button class="btn">Agregar al carrito</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+        <section id="contacto">
+        <h2>Contacto</h2>
+        <form id="contactForm">
+            <label>Nombre</label>
+            <input type="text" id="name" required>
+            <label>Teléfono</label>
+            <input type="tel" id="phone" required>
+            <label>Mensaje</label>
+            <textarea id="message" rows="4" required></textarea>
+            <button class="cta" type="submit">Enviar</button>
+        </form>
+        <div id="formMsg" class="muted"></div>
+        </section>
+    </main>
+
+    
+
+   
+
+  
+
+
+  <section id="nosotros">
+     <h2>Nosotros</h2>
+  <p>FARMACIA BIOSIMILARES es parte de CORPORACIÓN BIOSIMILARES SAC, una
+empresa comprometida con consolidarse entre las farmacias referentes del país,
+destacando por brindar un servicio integral al paciente, garantizando el acceso a
+medicamentos esenciales y específicos para diversas patologías, siempre con precios
+justos que permitan a cada persona cuidar su salud sin barreras económicas.
+Nos dedicamos a la comercialización de productos farmacéuticos, dispositivos médicos y
+productos sanitarios de procedencia legal, contando únicamente con proveedores
+verificados a través de las herramientas oficiales dispuestas por el ente regulador.</p>
+
+  <div class="nosotros-grid">
+    <div class="nosotros-item">
+      <img src="1231.png" alt="Nuestra Misión">
+      <div class="texto">
+        <h3>Misión</h3>
+        <p>Brindar a nuestros pacientes acceso a medicamentos esenciales y específicos para
+diversas patologías, con precios justos y competitivos que permitan cuidar su salud
+sin barreras económicas. Ofrecemos productos de calidad respaldados por
+proveedores verificados y un servicio caracterizado por la calidez, la atención
+personalizada y el compromiso profesional.
+</p>
+      </div>
+    </div>
+
+    <div class="nosotros-item">
+      <img src="123.png" alt="Nuestra Visión">
+      <div class="texto">
+        <h3>Visión</h3>
+        <p>Ser reconocidos a nivel nacional como una de las farmacias referentes del país,
+destacando por la accesibilidad a medicamentos de calidad, el servicio profesional y
+la confianza que generamos en cada paciente. Aspiramos a liderar el mercado
+mediante la innovación constante en nuestros procesos, la eficiencia en la gestión
+empresarial y el compromiso de contribuir a una salud más accesible y equitativa para
+todos</p>
+      </div>
+    </div>
+
+    <div class="nosotros-item">
+      <img src="as.png" alt="Nuestros Valores">
+      <div class="texto">
+        <h3>Valores</h3>
+        <p>• Garantizar que todos los productos comercializados cumplan con los más altos
+estándares de calidad y seguridad.
+• Cumplir de manera estricta con los requisitos del sistema de gestión de calidad y la
+normativa sanitaria vigente. <p>
+• Implementar y mantener procedimientos operativos que aseguren la conservación
+de las propiedades, eficacia y seguridad de los productos. </p>
+</p>
+      </div>
+    </div>
+  </div>
+</section>-->
+
+
+<footer>
+        <div class="card footer">
+        <strong>BIOSIMILARES</strong>
+        <div class="muted">Derechos reservados © <span id="year"></span></div>
+        </div>
+    </footer>
+
+<script>
+function buscarProducto() {
+  const valor = document.getElementById("buscar").value.toLowerCase();
+  if (valor) {
+    location.href = "#productos";
+  }
+}
+</script>
+
+
+ <script src="main.js"></script>
+    <script>
+document.getElementById('btnCategorias').addEventListener('click', () => {
+  const barra = document.getElementById('barraCategorias');
+  barra.classList.toggle('oculto');
+});
+</script>
+      </body>
+    </html>
