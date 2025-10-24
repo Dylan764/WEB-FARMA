@@ -742,3 +742,100 @@ html, body {
 .buscador button:hover {
   background-color: #0ed5f8;
 }
+
+
+
+/* === HEADER PRINCIPAL === */
+header {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.menu a,
+.menu button {
+  background: none;
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.menu a:hover,
+.menu button:hover {
+  color: #007bff;
+}
+
+/* --- buscador debajo y centrado --- */
+.buscador {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.buscador input {
+  width: 60%;
+  max-width: 400px;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px 0 0 8px;
+}
+
+.buscador button {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-left: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+}
+
+/* --- responsive --- */
+@media (max-width: 768px) {
+  .menu a:not(:first-child) {
+    display: none; /* solo deja Categorías visible */
+  }
+
+  .menu {
+    justify-content: center;
+  }
+
+  .buscador input {
+    width: 80%;
+  }
+}
+
+.grid {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+  gap: 25px !important;
+  width: 100% !important;
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+}

@@ -16,30 +16,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // ---- toggle para "Nosotros" (solo esa sección) ----
+  // ---- toggle para "Nosotros" ----
   const linkNosotros = document.querySelector('nav a[href="#nosotros"]');
   const nosotros = document.getElementById('nosotros');
 
-  if (nosotros) {
-    // asegura que esté oculto al inicio (CSS también debe manejarlo)
-    nosotros.classList.remove('active');
-  }
+  if (nosotros) nosotros.classList.remove('active');
 
   if (linkNosotros && nosotros) {
     linkNosotros.addEventListener('click', e => {
       e.preventDefault();
-      const isNowActive = nosotros.classList.toggle('active');
-
-      if (isNowActive) {
-        // abre y hace scroll suave hacia la sección
-        //nosotros.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      } else {
-        // si se cierra, no hacemos nada extra (opcional: volver al top)
-      }
+      nosotros.classList.toggle('active');
     });
   }
 
-  // ---- si navegas a otra sección, ocultar "Nosotros" si está abierto ----
+  // ---- si navegas a otra sección, ocultar "Nosotros" ----
   const navLinks = document.querySelectorAll('nav a');
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
@@ -48,26 +38,28 @@ document.addEventListener('DOMContentLoaded', () => {
         if (nosotros && nosotros.classList.contains('active')) {
           nosotros.classList.remove('active');
         }
-        // dejar comportamiento normal del enlace (anchor) para que haga scroll
       });
     }
   });
-});
-// --- Cambio de secciones ---
-document.querySelectorAll('nav a').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const seccionId = e.target.getAttribute('href').substring(1);
-    
-    // Oculta todas las secciones
-    document.querySelectorAll('section').forEach(sec => sec.classList.add('oculto'));
-    
-    // Muestra solo la sección seleccionada
-    document.getElementById(seccionId).classList.remove('oculto');
-  });
-});
-// === SLIDER AUTOMÁTICO CON FLECHAS ===
-document.addEventListener('DOMContentLoaded', () => {
+
+  // === 💚 CLICK EN LOGO: volver al inicio completo ===
+  const logo = document.getElementById('logoFarmacia');
+  if (logo) {
+    logo.style.cursor = 'pointer';
+    logo.addEventListener('click', e => {
+      e.preventDefault();
+
+      // Scroll suave hacia arriba
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+
+      // Espera un instante y recarga todo el index
+      setTimeout(() => {
+        window.location.reload();
+      }, 400);
+    });
+  }
+
+  // === SLIDER AUTOMÁTICO CON FLECHAS ===
   const slides = document.querySelectorAll('.slide');
   const btnIzq = document.querySelector('.flecha.izq');
   const btnDer = document.querySelector('.flecha.der');
@@ -78,20 +70,22 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.slides').style.transform = `translateX(-${i * 100}%)`;
   }
 
-  btnDer.addEventListener('click', () => {
-    indice = (indice + 1) % slides.length;
-    mostrarSlide(indice);
-  });
+  if (btnDer) {
+    btnDer.addEventListener('click', () => {
+      indice = (indice + 1) % slides.length;
+      mostrarSlide(indice);
+    });
+  }
 
-  btnIzq.addEventListener('click', () => {
-    indice = (indice - 1 + slides.length) % slides.length;
-    mostrarSlide(indice);
-  });
+  if (btnIzq) {
+    btnIzq.addEventListener('click', () => {
+      indice = (indice - 1 + slides.length) % slides.length;
+      mostrarSlide(indice);
+    });
+  }
 
-  // cambio automático cada 5s
   setInterval(() => {
     indice = (indice + 1) % slides.length;
     mostrarSlide(indice);
   }, 5000);
 });
-
